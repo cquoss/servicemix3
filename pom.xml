@@ -38,10 +38,6 @@
     Integration framework - JSR-208 
     </description>
     
-    <prerequisites>
-        <maven>2.2.1</maven>
-    </prerequisites>
-
     <scm>
         <connection>scm:svn:http://svn.apache.org/repos/asf/servicemix/smx3/trunk/</connection>
         <developerConnection>scm:svn:https://svn.apache.org/repos/asf/servicemix/smx3/trunk/</developerConnection>

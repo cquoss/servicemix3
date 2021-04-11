@@ -73,3 +73,57 @@ Many thanks for using Apache ServiceMix.
 
 The ServiceMix Team
 http://servicemix.apache.org/team.html
+
+P.S.
+
+cquoss Post-Scriptum
+===========================
+
+Forked apache/servicemix3 to cquoss/servicemix3.
+Compiling with AdoptOpenJdk 8u282-b08.
+Using local nexus installation with MirrorOf *.
+
+Missing dependencies in maven central:
+-------------------------------------------
+
+net.sf.saxon:saxon:9.1.0.8
+-> Found in: Enonic repository (https://repo.enonic.com/public)
+-> jar (pom is only GAV)
+
+net.sf.saxon:saxon-dom:9.1.0.8
+-> Found in: Enonic repository (https://repo.enonic.com/public)
+-> jar (pom is only GAV)
+
+com.google.code:jsmpp:2.0
+-> Found in: RedHat EA repository (https://maven.repository.redhat.com/earlyaccess/all)
+-> jar (pom is only GAV)
+
+com.sun.script:jruby-engine:20080611
+-> Found in: RedHat EA repository (https://maven.repository.redhat.com/earlyaccess/all)
+-> jar (pom is only GAV)
+
+com.sun.script:js-engine:20080611
+-> Found in: RedHat EA repository (https://maven.repository.redhat.com/earlyaccess/all)
+-> jar (pom is only GAV)
+
+de.schlichtherle.io:truezip:6.5.4
+-> Found in: RedHat EA repository (https://maven.repository.redhat.com/earlyaccess/all)
+-> jar (pom is only GAV)
+
+woodstox:wstx-all:pom:3.2.1
+-> pom missing, uploaded to 3rd party, autocreating from GAV
+
+groovy:groovy-all:pom:1.0
+-> pom missing, uploaded to 3rd party, autocreating from GAV
+
+Downloaded to lib (new directory introduced).
+Installed to local nexus 3rd party repository.
+
+Remove prerequisites tag from org.apache.servicemix:servicemix:pom:3.4.2-SNAPSHOT.
+
+Disable two tests in servicemix-core not working:
+
+    - ClassLoaderXmlPreprocessorTest.testUrlResources()
+    - BrokerTest.testExternalRouting()
+
+==> Done. Now on to servicemix-components and then run some tests locally with apache-servicemix.
